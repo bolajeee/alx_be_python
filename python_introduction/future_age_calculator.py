@@ -1,5 +1,5 @@
 #This script calculates the user will be in a specific year
-current_age = int(input("How old are you: "))
+current_age = input("How old are you: "))
 
 age = current_age + 27
 
