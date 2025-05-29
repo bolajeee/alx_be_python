@@ -1,19 +1,19 @@
 # this script gives advice based on the weather input
-usersInput = input("What's the weather like today? (sunny/rainy/cold):. ").lower()
+users_input = input("What's the weather like today? (sunny/rainy/cold):. ").lower()
 
 # Check the weather and provide advice suing match case
-if usersInput == "sunny":
+if users_input == "sunny":
     print("Wear a t-shirt and sunglasses.")
-elif usersInput == "rainy":
+elif users_input == "rainy":
     print("Don't forget your umbrella and a raincoat.")
-elif usersInput == "cold":
+elif users_input == "cold":
     print("Make sure to wear a warm coat and a scarf.")
 else:
     print("Sorry, I don't have recommendations for this weather.")
 
 
 # Check the weather and provide advice suing match case
-# match usersInput:
+# match users_input:
 #     case "sunny":
 #         print("Wear a t-shirt and sunglasses.")
 #     case "rainy":
