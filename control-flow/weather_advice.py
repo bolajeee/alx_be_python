@@ -2,7 +2,9 @@
 usersInput = input("What's the weather like today? (sunny/rainy/cold):. ").lower()
 
 # Check the weather and provide advice suing match case
-if usersInput == "sunny":
+if usersInput != "sunny" and usersInput != "rainy" and usersInput != "cold":
+    print("Sorry, I don't have recommendations for this weather.")
+elif usersInput == "sunny":
     print("Wear a t-shirt and sunglasses.")
 elif userInput == "rainy":
     print("Don't forget your umbrella and a raincoat.")
