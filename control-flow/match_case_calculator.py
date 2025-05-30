@@ -6,7 +6,7 @@ retry = True
 
 
 while retry:
-    operation = input("Choose the operation (+, -, *, /):. ")
+    operation = input("Choose the operation (+, -, *, /): ")
     match operation:
         case "+":
             result = num1 + num2
