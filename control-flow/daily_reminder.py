@@ -2,16 +2,12 @@
 
 # --- Prompt for Task Description ---
 task = input("Enter your task: ").strip()
-if not task:
-    print("Task cannot be empty. Please enter a valid task.")
 
 # --- Prompt for Task Priority ---
 priority = input("Priority (high/medium/low) ").lower()
 
 # --- Prompt for Time-Bound Status ---
 time_bound = input("Is it time-bound? (yes/no): ").lower()
-if time_bound not in ["yes", "no"]:
-    print("Invalid input. Please enter 'yes' or 'no'.")
 
 # --- Process the Task ---
 match priority:
