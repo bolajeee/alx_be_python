@@ -1,26 +1,17 @@
 # This script reminds user of tasks based on priority and time sensitivity
 
 # --- Prompt for Task Description ---
-task = ""
-while not task.strip():
-    task = input("Enter the task you want to be reminded of: ").strip()
-    if not task:
-        print("Task cannot be empty. Please enter a valid task.")
+task = input("Enter your task: ").strip()
+if not task:
+    print("Task cannot be empty. Please enter a valid task.")
 
 # --- Prompt for Task Priority ---
-priority = ""
-valid_priorities = ["high", "medium", "low"]
-while priority not in valid_priorities:
-    priority = input("Enter the priority of the task (high, medium, low): ").lower()
-    if priority not in valid_priorities:
-        print("Invalid input. Please enter 'high', 'medium', or 'low'.")
+priority = input("Priority (high/medium/low) ").lower()
 
 # --- Prompt for Time-Bound Status ---
-time_bound = ""
-while time_bound not in ["yes", "no"]:
-    time_bound = input("Is the task time-bound? (yes/no): ").lower()
-    if time_bound not in ["yes", "no"]:
-        print("Invalid input. Please enter 'yes' or 'no'.")
+time_bound = input("Is it time-bound? (yes/no): ").lower()
+if time_bound not in ["yes", "no"]:
+    print("Invalid input. Please enter 'yes' or 'no'.")
 
 # --- Process the Task ---
 match priority:
