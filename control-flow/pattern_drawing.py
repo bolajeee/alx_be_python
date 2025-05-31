@@ -1,13 +1,13 @@
 # This script will prompt the user to enter a positive integer, then use nested loops to print a square pattern of that size made of asterisks (*).
-size = int(input("Enter the size of the square: "))
+length = int(input("Enter the size of the pattern: "))
 
 # Initialize row counter
 row = 0
 
 # Use a while loop to iterate through each row
-while row < size:
+while row < length:
     # Use a for loop to print asterisks side by side
-    for col in range(size):
+    for col in range(length):
         print("*", end="")
     # Move to the next line after printing a row
     print()
