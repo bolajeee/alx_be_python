@@ -12,17 +12,19 @@ time_bound = input("Is it time-bound? (yes/no): ")
 # --- Process the Task ---
 match priority:
     case 'high':
-        result = f"🚨 Reminder: {task} is a high priority task."
+        result = f"🚨 Reminder: {task} is a high priority task"
     case 'medium':
-        result = f"⚠️ Reminder: {task} is a medium priority task."
+        result = f"⚠️ Reminder: {task} is a medium priority task"
     case 'low':
-        result = f"📝 Reminder: {task} is a low priority task."
+        result = f"📝 Reminder: {task} is a low priority task"
 
 # --- Time Sensitivity Check ---
 if time_bound == "yes":
-    result += " This task is time-bound and requires immediate attention today!"
+    message = "that requires immediate attention today!"
+    result += " " + message
 else:
-    result += " This task is not time-sensitive and can be scheduled for later."
+    message = "that can be scheduled for later."
+    result += " " + message
 
 # --- Output the Reminder ---
 print("\n" + result)
