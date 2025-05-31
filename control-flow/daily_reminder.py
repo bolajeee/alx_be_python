@@ -21,6 +21,8 @@ match priority:
 # --- Time Sensitivity Check ---
 if time_bound == "yes":
     result += " This task is time-bound and requires immediate attention today!"
+else:
+    result += " This task is not time-sensitive and can be scheduled for later."
 
 # --- Output the Reminder ---
 print("\n" + result)
