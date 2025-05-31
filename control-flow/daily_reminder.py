@@ -1,13 +1,13 @@
 # This script reminds user of tasks based on priority and time sensitivity
 
 # --- Prompt for Task Description ---
-task = input("Enter your task: ").strip()
+task = input("Enter your task: ")
 
 # --- Prompt for Task Priority ---
-priority = input("Priority (high/medium/low) ").lower()
+priority = input("Priority (high/medium/low) ")
 
 # --- Prompt for Time-Bound Status ---
-time_bound = input("Is it time-bound? (yes/no): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ")
 
 # --- Process the Task ---
 match priority:
