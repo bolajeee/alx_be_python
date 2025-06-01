@@ -18,18 +18,24 @@ match priority:
     case 'low':
         result = f"📝 {task} is a low priority task"
 
-delay_seconds = 2  # Delay in seconds
 # --- Time Sensitivity Check ---
 if time_bound == "yes":
     message = "that requires immediate attention today!"
-    reminder = f"\nReminder: {task} is a high priority task that requires immediate attention today!"
     result += " " + message 
 else:
     message = ". Consider completing it when you have free time."
-    reminder = f"\nReminder: {task} is a low priority task. Consider completing it when you have free time." 
-    result += " " + message 
+     result += " " + message 
+
+# --- Simulate Delay ---
+delay_seconds = 2  # Set delay in seconds
+time.sleep(delay_seconds)
+match priority:
+    case 'high':
+        reminder = f"\nReminder: {task} is a high priority task that requires immediate attention today!"
+    case 'medium':
+        reminder = f"\nReminder: {task} is a medium priority task. Please address it soon."
+    case 'low':
+        reminder = f"\nReminder: {task} is a low priority task. Consider completing it when you have free time."
 
 # --- Output the Reminder ---
 print("\n" + result)
-time.sleep(delay_seconds)  # Simulate a delay before showing the reminder
-print(reminder)
