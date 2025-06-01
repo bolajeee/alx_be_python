@@ -24,7 +24,7 @@ if time_bound == "yes":
     result += " " + message 
 else:
     message = ". Consider completing it when you have free time."
-     result += " " + message 
+    result += " " + message 
 
 # --- Simulate Delay ---
 delay_seconds = 2  # Set delay in seconds
@@ -37,5 +37,9 @@ match priority:
     case 'low':
         reminder = f"\nReminder: {task} is a low priority task. Consider completing it when you have free time."
 
+if time_bound == "yes":
+    reminder += " It is time-sensitive and should be completed today."
+
 # --- Output the Reminder ---
 print("\n" + result)
+print(reminder)
