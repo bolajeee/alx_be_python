@@ -17,14 +17,13 @@ match priority:
         result = f"⚠️ Reminder: {task} is a medium priority task"
     case 'low':
         result = f"📝 Reminder: {task} is a low priority task"
-
-# --- Time Sensitivity Check ---
-if time_bound == "yes":
-    message = "that requires immediate attention today!"
-    result += " " + message
-else:
-    message = "that can be scheduled for later."
-    result += " " + message
+    # --- Time Sensitivity Check ---
+    if time_bound == "yes":
+        message = "that requires immediate attention today!"
+        result += " " + message
+    else:
+        message = ". Consider completing it when you have free time."
+        result += " " + message
 
 # --- Output the Reminder ---
 print("\n" + result)
