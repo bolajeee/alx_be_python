@@ -12,6 +12,7 @@ def perform_operation(num1, num2, operation):
         case _ if operation == "divide":
             if num2 == 0:
                 print("Error: Division by zero is not allowed.")
+                result = None
             else:
                 result = num1 / num2
                 print(f"The result of dividing {num1} by {num2} is: {result}")
