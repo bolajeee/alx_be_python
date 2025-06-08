@@ -1,4 +1,6 @@
 def perform_operation(num1, num2, operation):
+    result = None  # Default to None in case of error or unsupported operation
+
     match operation:
         case _ if operation == "add":
             result = num1 + num2
@@ -12,10 +14,10 @@ def perform_operation(num1, num2, operation):
         case _ if operation == "divide":
             if num2 == 0:
                 print("Error: Division by zero is not allowed.")
-                result = None
-            else:
+            elif num2 != 0:  # This is where we use `elif`
                 result = num1 / num2
                 print(f"The result of dividing {num1} by {num2} is: {result}")
+        case _:
+            print(f"Error: Unsupported operation '{operation}'")
 
     return result
-
