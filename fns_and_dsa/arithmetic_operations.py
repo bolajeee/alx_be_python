@@ -1,3 +1,4 @@
+# This function performs basic arithmetic operations based on the provided operation type.
 def perform_operation(num1, num2, operation):
     result = None  # Default to None in case of error or unsupported operation
 

@@ -5,7 +5,7 @@ def display_menu():
     print("3. View List")
     print("4. Exit")
 
-def main():
+def menu():
     shopping_list = []
     while True:
         display_menu()
@@ -20,9 +20,10 @@ def main():
                 print("Item name cannot be empty.")
         elif choice == '2':
             item = input("Enter the item to remove: ").strip()
-            if item in shopping_list:
-                shopping_list.remove(item)
-                print(f"'{item}' has been removed from your shopping list.")
+            found = next((i for i in shopping_list if i.lower() == item.lower()), None)
+            if found:
+                shopping_list.remove(found)
+                print(f"'{found}' has been removed from your shopping list.")
             else:
                 print(f"'{item}' was not found in the shopping list.")
         elif choice == '3':
@@ -39,4 +40,4 @@ def main():
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    main()
+    menu()
