@@ -15,10 +15,9 @@ def main():
         account.deposit(amount)
         print(f"Deposited: ${amount}")
     elif command == "withdraw" and amount is not None:
-        try:
-            account.withdraw(amount)
+        if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
-        except ValueError as e:
+        else:
             print("Insufficient funds.")
     elif command == "display":
         print(account.display_balance())
