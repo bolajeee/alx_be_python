@@ -21,7 +21,7 @@ def main():
         except ValueError as e:
             print(e)
     elif command == "display":
-        print(f"Current Balance: ${account.display_balance()}")
+        print(account.display_balance())
     else:
         print("Invalid command.")
 
