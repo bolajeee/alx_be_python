@@ -1,4 +1,4 @@
-class BankAccount():  # A simple bank account class to demonstrate object-oriented programming principles
+class BankAccount:  # A simple bank account class to demonstrate object-oriented programming principles
     def __init__(self, account_balance=0):
         self.account_balance = account_balance # Initialize the account with a account_balance of 0
 
