@@ -19,7 +19,7 @@ def main():
             account.withdraw(amount)
             print(f"Withdrew: ${amount}")
         except ValueError as e:
-            print(e)
+            print("Insufficient funds.")
     elif command == "display":
         print(account.display_balance())
     else:
