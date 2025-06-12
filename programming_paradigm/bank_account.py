@@ -13,7 +13,7 @@ class BankAccount:  # A simple bank account class to demonstrate object-oriented
             self.account_balance -= amount
             return True
         else:
-            raise ValueError("Withdrawal amount must be positive and less than or equal to the account_balance") # Ensure that the withdrawal amount is positive and does not exceed the account_balance
+            raise ValueError("Insufficient funds.") # Ensure that the withdrawal amount is positive and does not exceed the account_balance
             return False
 
     def display_balance(self, currency='USD'):
