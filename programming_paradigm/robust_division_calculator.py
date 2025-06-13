@@ -14,5 +14,5 @@ def safe_divide(numerator, denominator):
         elif numerator != float(numerator):
             return f"Error: Please enter numeric values only."
         else:
-            return f"Error: {str(e)}"
+            return f"{str(e)}"
         
