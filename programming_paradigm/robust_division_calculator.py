@@ -10,9 +10,9 @@ def safe_divide(numerator, denominator):
    
     except ValueError as e:
         if denominator != float(denominator):
-            return f"Error: Non-numeric denominator '{denominator}'"
+            return f"Error: Please enter numeric values only."
         elif numerator != float(numerator):
-            return f"Error: Non-numeric numerator '{numerator}'"
+            return f"Error: Please enter numeric values only."
         else:
             return f"Error: {str(e)}"
         
