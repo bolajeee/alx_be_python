@@ -7,24 +7,19 @@ class TestSimpleCalculator(unittest.TestCase):
         
     # Test addition
     def test_addition(self):
-        result = self.calc.add(2, 3)
-        self.assertEqual(result, 5)
+        self.assertEqual(self.calc.add(2, 3), 5)
     # Test subtraction
     def test_subtraction(self):
-        result = self.calc.subtract(5, 3)
-        self.assertEqual(result, 2)
+        self.assertEqual(self.calc.subtract(5, 3), 2)
     # Test multiplication
     def test_multiplication(self):
-        result = self.calc.multiply(3, 4)
-        self.assertEqual(result, 12)
+        self.assertEqual(self.calc.multiply(3, 4), 12)
     # Test division
     def test_division(self):
-        result = self.calc.divide(10, 2)
-        self.assertEqual(result, 5)
+        self.assertEqual(self.calc.divide(10, 2), 5)
     # Test division by zero
     def test_division_by_zero(self):
-        result = self.calc.divide(10, 0)
-        self.assertEqual(result, None)
+        self.assertEqual(self.calc.divide(10, 0), None)
 
 if __name__ == "__main__":
     unittest.main()
