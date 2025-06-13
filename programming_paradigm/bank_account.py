@@ -15,7 +15,7 @@ class BankAccount:  # A simple bank account class to demonstrate object-oriented
         return False
 
     def display_balance(self, ):
-        print(f"Current Balance: {self.account_balance}")
+        print(f"Current Balance: ${float(self.account_balance):.2f}")
 
           # Display the account balance in the specified currency, defaulting to USD
 
