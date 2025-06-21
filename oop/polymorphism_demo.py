@@ -1,0 +1,26 @@
+import math
+
+# Base class
+class Shape:
+    def area(self):
+        # Forces derived classes to implement this method
+        raise NotImplementedError("Subclasses must override area() method")
+
+
+# Derived class: Rectangle
+class Rectangle(Shape):
+    def __init__(self, length: float, width: float):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+
+# Derived class: Circle
+class Circle(Shape):
+    def __init__(self, radius: float):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
