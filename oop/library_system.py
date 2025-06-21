@@ -1,0 +1,45 @@
+# library_system.py
+
+class Book:
+    def __init__(self, title: str, author: str):
+        self.title = title
+        self.author = author
+
+    def get_details(self):
+        return f"'{self.title}' by {self.author}"
+
+
+class EBook(Book):
+    def __init__(self, title: str, author: str, file_size: int):
+        super().__init__(title, author)
+        self.file_size = file_size  # in MB
+
+    def get_details(self):
+        return f"{super().get_details()} [EBook - {self.file_size}MB]"
+
+
+class PrintBook(Book):
+    def __init__(self, title: str, author: str, page_count: int):
+        super().__init__(title, author)
+        self.page_count = page_count
+
+    def get_details(self):
+        return f"{super().get_details()} [PrintBook - {self.page_count} pages]"
+
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book: Book):
+        if isinstance(book, Book):
+            self.books.append(book)
+        else:
+            print("Only Book, EBook, or PrintBook instances can be added.")
+
+    def list_books(self):
+        if not self.books:
+            print("The library is empty.")
+        else:
+            for idx, book in enumerate(self.books, start=1):
+                print(f"{idx}. {book.get_details()}")
